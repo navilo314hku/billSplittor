@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1> hi {{user}}, make a payment in this page </h1>
+
+
+    <form action="#" method="post">
+      <label>Bill Title you have made:</label><br><br>
+      <input type="txt" name="billTitle" value="Electricity Bill"><br><br>
+      <label>Person you paid to: </label><br><br>
+      <input type='txt' name='payTo' value=""><br><br>
+      <input type='submit' value='submit'><br><br>
+    </form>
+    <h1> Bills to be paid by you </h1>
+    {%for B in Bills%}
+      <p>
+        Bill title: {{B.billName}}||
+        Bill amount: {{B.amount}}||
+        Requested by: {{B.payTo}}
+      </p>
+    {% endfor %}
+
+  </body>
+</html>

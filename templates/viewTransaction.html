@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1> Bill paid/will be paid to you by others</h1>
+    {%for b in Bills%}
+      <p>
+        Pay by:{{b.payBy}};
+        bill title: {{b.billName}};
+        amount: {{b.amount}}
+        status: {{b.status}}
+
+      </p>
+    {% endfor %}
+  </body>
+</html>

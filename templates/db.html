@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+  {%block title%}DataBase content page{%endblock%}
+  {%block content%}
+
+    <h1> This is db.html </h1>
+    <h1> Users information </h1>
+
+    {%for user in Users%}
+      <p>
+        user.id: {{user.id}}
+        user.username: {{user.username}}
+        user.email: {{user.email}}
+        user.password: {{user.password}}</p>
+    {% endfor %}
+    <h1> Bills information </h1>
+    {%for b in Bills%}
+      <p>id: {{b.id}}; bill Name: {{b.billName}}; payBy: {{b.payBy}}; payTo: {{b.payTo}}; amount: {{b.amount}}; status: {{b.status}}
+
+      </p>
+    {% endfor %}
+    <h1> latest action of Users </h1>
+    {%for action in latestAction%}
+      <p>
+        user: {{action.username}} ;;
+        latestAction: {{action.message}}
+      </p>
+    {% endfor %}
+  {%endblock%}
